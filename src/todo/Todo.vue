@@ -9,7 +9,8 @@
         />
         <TodoItem v-for="(todo,index) in todos"
                   :todo="todo" :key="todo.id"
-                  currentEditing="currentEditing"
+                  @currentTodo="currentTodo"
+                  :currentEditing="currentEditing"
                   @deleteOne="deleteOne(index)"/>
         <TodoTab v-if="todos.length > 0" :todos="todos" filterstate="filterstate"/>
     </div>
@@ -45,6 +46,10 @@
                     event.target.value = ''
                 }
             },
+            currentTodo(data) {
+                this.currentEditing = data
+            },
+
             deleteOne(delIndex) {
                 this.todos.splice(delIndex, 1)
             }
@@ -61,19 +66,19 @@
     }
 
     .add-input {
-        position: relative
-        margin: 0
-        width: 100%
-        font-size: 20px
-        font-family: inherit
-        font-weight: inherit
-        line-height: 1.4em
-        outline: none
-        color: inherit
-        box-sizing: border-box
-        font-smoothing: antialiased
-        padding: 16px 16px 16px 36px
-        border: none
-        box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03)
+        position relative
+        margin 0
+        width 100%
+        font-size 20px
+        font-family inherit
+        font-weight inherit
+        line-height 1.4em
+        outline none
+        color inherit
+        box-sizing border-box
+        font-smoothing antialiased
+        padding 16px 16px 16px 36px
+        border none
+        box-shadow inset 0 -2px 1px rgba(0, 0, 0, 0.03)
     }
 </style>

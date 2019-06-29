@@ -1,15 +1,18 @@
 <template>
     <div :class="['todo-item',todo.completed ?'completed':'',{editing: currentEditing === todo}]">
-        <input
-                type="checkbox"
-                class="toggle"
-                v-model="todo.completed"
-        />
-        <label @dbclick="editTodo">{{todo.content}}</label>
-        <button
-                class="delete"
-                @click="deleteTodo"
-        ></button>
+        <div class="view">
+            <input
+                    type="checkbox"
+                    class="toggle"
+                    v-model="todo.completed"
+            />
+            <label @dblclick="getCurrentTodo(todo)">{{todo.content}}</label>
+            <button
+                    class="delete"
+                    @click="deleteTodo"
+            ></button>
+        </div>
+        <input class="edit" :value="todo.content" >
     </div>
 </template>
 
@@ -22,13 +25,12 @@
                 required: true
             },
             currentEditing: {
-                type: String,
                 required: true
             }
         },
         methods: {
-            editTodo() {
-
+            getCurrentTodo(todo) {
+                this.$emit('currentTodo',todo)
             },
             deleteTodo() {
                 this.$emit('deleteOne')
@@ -40,45 +42,52 @@
 <style lang="stylus" scoped>
     .todo-item {
         position: relative
-        background-color: #fff
-        font-size: 24px
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06)
+        background-color #fff
+        font-size 24px
+        border-bottom 1px solid rgba(0, 0, 0, 0.06)
         &:hover {
             .delete:after {
-                content: '×'
+                content '×'
             }
+        }
+        .edit {
+            display none
         }
         label {
-            white-space: pre-line
-            word-break: break-all
-            padding: 15px 60px 15px 15px
-            margin-left: 45px
-            display: block
-            line-height: 1.2
-            transition: color 0.4s
+            white-space pre-line
+            word-break break-all
+            padding 15px 60px 15px 15px
+            margin-left 45px
+            display block
+            line-height 1.2
+            transition color 0.4s
         }
-        editing {
-            label {
-                boder 1px solid orange
+        &.editing {
+            border-bottom none
+            padding 0
+            .edit {
+                display block
+                width 520px
+                padding 13px 16px 13px 15px
+                margin 0 0 0 45px
+                font 24px '微软雅黑'
+                border-color rgba(55, 94, 99, 0.3)
             }
-        }
-        &.completed {
-            label {
-                color: #d9d9d9
-                text-decoration: line-through
+            .view {
+                display none
             }
         }
         .toggle {
-            text-align: center
-            width: 40px
-            height: 40px
-            position: absolute
-            top: 0
-            bottom: 0
-            margin: auto 0
-            border: none
-            appearance: none
-            outline: none
+            text-align center
+            width 40px
+            height 40px
+            position absolute
+            top 0
+            bottom 0
+            margin auto 0
+            border none
+            appearance none
+            outline none
             &:after {
                 content url('../asserts/images/round.svg')
             }
@@ -87,25 +96,25 @@
             }
         }
         input[type=checkbox] {
-            -webkit-appearance: none
+            -webkit-appearance none
         }
         .delete {
-            position: absolute
-            top: 0
-            right: 10px
-            bottom: 0
-            width: 40px
-            height: 40px
-            margin: auto 0
-            font-size: 30px
-            color: #cc9a9a
-            margin-bottom: 11px
-            transition: color 0.2s ease-out
-            background-color: transparent
-            appearance: none
-            border-width: 0
-            cursor: pointer
-            outline: none
+            position absolute
+            top 0
+            right 10px
+            bottom 0
+            width 40px
+            height 40px
+            margin auto 0
+            font-size 30px
+            color #cc9a9a
+            margin-bottom 11px
+            transition color 0.2s ease-out
+            background-color transparent
+            appearance none
+            border-width 0
+            cursor pointer
+            outline none
         }
     }
 </style>
