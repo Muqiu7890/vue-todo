@@ -8,9 +8,9 @@
 </template>
 
 <script>
-    import Header from './todo/Header.vue'
-    import Footer from './todo/Footer.vue'
-    import Todo from './todo/Todo.vue'
+    import Header from './layout/Header.vue'
+    import Footer from './layout/Footer.vue'
+    import Todo from './views/Todo.vue'
 
     export default {
         name: "App.vue",
