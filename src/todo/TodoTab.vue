@@ -37,10 +37,10 @@
         },
         methods: {
             toggleFilter(state) {
-
+                this.$emit('toggle',state)
             },
             clearAllCompleted() {
-
+                this.$emit('clearAll')
             }
         }
     }
@@ -86,7 +86,7 @@
             cursor pointer
             border 1px solid rgba(175, 47, 47, 0)
             &.active {
-                border-color rgba(100, 100, 100, 0.3)
+                border-color rgba(100, 100, 100, 0.5)
                 border-radius 7px
             }
         }

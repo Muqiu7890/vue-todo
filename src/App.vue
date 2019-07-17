@@ -20,15 +20,9 @@
 </script>
 
 <style lang="stylus" scoped>
-    #cover {
-        position absolute
-        left 0
-        right 0
-        top 0
-        bottom 0
+    .app {
         background-color whitesmoke
         opacity 0.2
-        z-index -1
     }
 
 

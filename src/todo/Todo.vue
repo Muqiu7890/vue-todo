@@ -7,12 +7,18 @@
                 placeholder="What needs to be done?"
                 @keyup.enter="addTodo"
         />
-        <TodoItem v-for="(todo,index) in todos"
+        <TodoItem v-for="(todo,index) in filtertodos"
                   :todo="todo" :key="todo.id"
                   @currentTodo="currentTodo"
+                  @cancelCurrentTodo="cancelCurrentTodo"
                   :currentEditing="currentEditing"
                   @deleteOne="deleteOne(index)"/>
-        <TodoTab v-if="todos.length > 0" :todos="todos" filterstate="filterstate"/>
+        <TodoTab v-if="todos.length > 0"
+                 :todos="todos"
+                 :filterstate="filterstate"
+                 @toggle="toggleState"
+                 @clearAll="clearAllCompleted"
+        />
     </div>
 </template>
 
@@ -28,6 +34,24 @@
                 todos: [],
                 filterstate: 'all',
                 currentEditing: 'null'
+            }
+        },
+        computed: {
+            filtertodos: function () {
+                switch (this.filterstate) {
+                    case 'active': {
+                        return this.todos.filter(item => !item.completed);
+                        break;
+                    }
+                    case 'completed': {
+                        return this.todos.filter(item => item.completed);
+                        break;
+                    }
+                    default: {
+                        return this.todos;
+                        break;
+                    }
+                }
             }
         },
         methods: {
@@ -49,11 +73,18 @@
             currentTodo(data) {
                 this.currentEditing = data
             },
-
+            cancelCurrentTodo() {
+                this.currentEditing = null
+            },
             deleteOne(delIndex) {
                 this.todos.splice(delIndex, 1)
+            },
+            toggleState(state) {
+                this.filterstate = state
+            },
+            clearAllCompleted() {
+                this.todos = this.todos.filter(todo => !todo.completed)
             }
-
         }
     }
 </script>

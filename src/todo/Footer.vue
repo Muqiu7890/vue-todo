@@ -13,6 +13,7 @@
 <style lang="stylus" scoped>
     .todo-footer {
         margin-top 40px
+        margin-bottom 40px
         text-align center
         font-style italic
         font-family 'Times New Roman', Times, serif

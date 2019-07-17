@@ -12,7 +12,7 @@
                     @click="deleteTodo"
             ></button>
         </div>
-        <input class="edit" :value="todo.content" >
+        <input class="edit" type="text" v-model="todo.content" @blur="doneEdit()" @keyup.enter="doneEdit()">
     </div>
 </template>
 
@@ -31,6 +31,9 @@
         methods: {
             getCurrentTodo(todo) {
                 this.$emit('currentTodo',todo)
+            },
+            doneEdit() {
+                this.$emit('cancelCurrentTodo')
             },
             deleteTodo() {
                 this.$emit('deleteOne')
