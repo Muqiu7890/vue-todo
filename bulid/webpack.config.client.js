@@ -38,12 +38,32 @@ if (isDev) {
         module: {
             rules: [
                 {
-                    test: /\.styl/,
-                    use: [
-                        'style-loader',
-                        'css-loader',
-                        'stylus-loader'
-                    ]
+                    test: /\.styl(us)?$/,
+                    oneOf: [
+                        // 这里匹配 `<style module>`
+                        {
+                            resourceQuery: /module/,
+                            use: [
+                                'vue-style-loader',
+                                {
+                                    loader: 'css-loader',
+                                    options: {
+                                        modules: true,
+                                        localIdentName: '[path]-[name]-[hash:base64:5]',
+                                        camelCase: true
+                                    }
+                                },
+                                'stylus-loader'
+                            ]
+                        },
+                        {
+                            use: [
+                                'vue-style-loader',
+                                'css-loader',
+                                'stylus-loader'
+                            ]
+                        }
+                    ],
                 }
             ]
         },
@@ -55,7 +75,7 @@ if (isDev) {
         ])
     })
 } else {
-    config = merge(baseConfig,{
+    config = merge(baseConfig, {
         entry: {
             app: path.join(__dirname, '../src/index.js'),
             vendor: ['vue'] // 打包类库
@@ -66,14 +86,31 @@ if (isDev) {
         module: {
             rules: [
                 {
-                    test: /\.styl/,
-                    use: [
+                    test: /\.styl(us)?$/,
+                    oneOf: [
+                        // 这里匹配 `<style module>`
                         {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {publicPath: '../'}
+                            resourceQuery: /module/,
+                            use: [
+                                'vue-style-loader',
+                                {
+                                    loader: 'css-loader',
+                                    options: {
+                                        modules: true,
+                                        localIdentName: '[hash:base64:5]',
+                                        camelCase: true
+                                    }
+                                },
+                                'stylus-loader'
+                            ]
                         },
-                        'css-loader',
-                        'stylus-loader'
+                        {
+                            use: [
+                                'vue-style-loader',
+                                'css-loader',
+                                'stylus-loader'
+                            ]
+                        }
                     ]
                 }
             ]

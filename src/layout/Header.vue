@@ -1,5 +1,5 @@
 <template>
-    <header class="todo-header">
+    <header :class="$style['todo-header']">
         <h1>Todo</h1>
     </header>
 </template>
@@ -10,7 +10,7 @@
     }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus" module>
     /*嵌套写法*/
     .todo-header {
         text-align center

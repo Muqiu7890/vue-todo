@@ -1,4 +1,7 @@
 const path = require('path');
+const vueLoaderOptions = require('./vue-loader.config')
+
+const isDev = process.env.NODE_ENV === "development"
 
 const config = {  //导出一个具有特殊属性的对象
     target: "web",
@@ -12,12 +15,13 @@ const config = {  //导出一个具有特殊属性的对象
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: vueLoaderOptions(isDev)
             },
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
+                    'vue-style-loader',
                     'css-loader'
                 ]
             },
