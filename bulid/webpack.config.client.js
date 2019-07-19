@@ -70,8 +70,7 @@ if (isDev) {
         devtool: '#cheap-module-eval-source-map',
         devServer,
         plugins: defaultPlugins.concat([
-            new webpack.HotModuleReplacementPlugin(),
-            new webpack.NoEmitOnErrorsPlugin()
+            new webpack.HotModuleReplacementPlugin()
         ])
     })
 } else {
