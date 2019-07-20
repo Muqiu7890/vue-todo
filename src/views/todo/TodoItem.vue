@@ -96,10 +96,10 @@
             appearance none
             outline none
             &:after {
-                content url('../asserts/images/round.svg')
+                content url('../../asserts/images/round.svg')
             }
             &:checked:after {
-                content url('../asserts/images/done.svg')
+                content url('../../asserts/images/done.svg')
             }
         }
         input[type=checkbox] {

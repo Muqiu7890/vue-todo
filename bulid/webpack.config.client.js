@@ -17,6 +17,11 @@ const devServer = {
     overlay: {
         errors: true,
     },
+    // 解决单页面应用出现的404（所访问资源在服务器找不到）
+    // 若找不到资源 则返回默认首页
+    historyApiFallback: {
+        index: '/index.html'
+    },
     hot: true
 }
 
