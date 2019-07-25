@@ -7,6 +7,7 @@ const WebpackDevServer = require('webpack-dev-server');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
+const VueClientPlugin = require('vue-server-renderer/client-plugin')
 
 const isDev = process.env.NODE_ENV === "development"
 let config = {}
@@ -33,9 +34,10 @@ const defaultPlugins = [
     }),
     new HtmlWebpackPlugin({
         // 指定生成的文件依赖的html文件模板
-        template: './src/index.html',
+        template: './client/index.html'
     }),
     new VueLoaderPlugin(),
+    new VueClientPlugin()
 ]
 
 if (isDev) {
@@ -58,6 +60,10 @@ if (isDev) {
                                         camelCase: true
                                     }
                                 },
+                                {
+                                    loader: 'postcss-loader',
+                                    options: { sourceMap: true }
+                                },
                                 'stylus-loader'
                             ]
                         },
@@ -65,6 +71,7 @@ if (isDev) {
                             use: [
                                 'vue-style-loader',
                                 'css-loader',
+                                'postcss-loader',
                                 'stylus-loader'
                             ]
                         }
@@ -81,7 +88,7 @@ if (isDev) {
 } else {
     config = merge(baseConfig, {
         entry: {
-            app: path.join(__dirname, '../src/index.js'),
+            app: path.join(__dirname, '../client/index.js'),
             vendor: ['vue'] // 打包类库
         },
         output: {
@@ -105,6 +112,10 @@ if (isDev) {
                                         camelCase: true
                                     }
                                 },
+                                {
+                                    loader: 'postcss-loader',
+                                    options: { sourceMap: true }
+                                },
                                 'stylus-loader'
                             ]
                         },
@@ -112,6 +123,7 @@ if (isDev) {
                             use: [
                                 'vue-style-loader',
                                 'css-loader',
+                                'postcss-loader',
                                 'stylus-loader'
                             ]
                         }
