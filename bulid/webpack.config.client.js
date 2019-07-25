@@ -46,35 +46,21 @@ if (isDev) {
             rules: [
                 {
                     test: /\.styl(us)?$/,
-                    oneOf: [
-                        // 这里匹配 `<style module>`
+                    use: [
+                        'vue-style-loader',
                         {
-                            resourceQuery: /module/,
-                            use: [
-                                'vue-style-loader',
-                                {
-                                    loader: 'css-loader',
-                                    options: {
-                                        modules: true,
-                                        localIdentName: '[path]-[name]-[hash:base64:5]',
-                                        camelCase: true
-                                    }
-                                },
-                                {
-                                    loader: 'postcss-loader',
-                                    options: { sourceMap: true }
-                                },
-                                'stylus-loader'
-                            ]
+                            loader: 'css-loader',
+                            options: {
+                                // modules: true,
+                                // localIdentName: '[path]-[name]-[hash:base64:5]',
+                                camelCase: true
+                            }
                         },
                         {
-                            use: [
-                                'vue-style-loader',
-                                'css-loader',
-                                'postcss-loader',
-                                'stylus-loader'
-                            ]
-                        }
+                            loader: 'postcss-loader',
+                            options: {sourceMap: true}
+                        },
+                        'stylus-loader',
                     ],
                 }
             ]
@@ -98,41 +84,27 @@ if (isDev) {
             rules: [
                 {
                     test: /\.styl(us)?$/,
-                    oneOf: [
-                        // 这里匹配 `<style module>`
+                    use: [
+                        MiniCssExtractPlugin.loader,
                         {
-                            resourceQuery: /module/,
-                            use: [
-                                'vue-style-loader',
-                                {
-                                    loader: 'css-loader',
-                                    options: {
-                                        modules: true,
-                                        localIdentName: '[hash:base64:5]',
-                                        camelCase: true
-                                    }
-                                },
-                                {
-                                    loader: 'postcss-loader',
-                                    options: { sourceMap: true }
-                                },
-                                'stylus-loader'
-                            ]
+                            loader: 'css-loader',
+                            options: {
+                                // modules: true,
+                                // localIdentName: '[path]-[name]-[hash:base64:5]',
+                                camelCase: true
+                            }
                         },
                         {
-                            use: [
-                                'vue-style-loader',
-                                'css-loader',
-                                'postcss-loader',
-                                'stylus-loader'
-                            ]
-                        }
-                    ]
+                            loader: 'postcss-loader',
+                            options: {sourceMap: true}
+                        },
+                        'stylus-loader',
+                    ],
                 }
             ]
         },
         plugins: defaultPlugins.concat([
-            new MiniCssExtractPlugin({filename: 'style.[contentHash:8].css'})
+            new MiniCssExtractPlugin({filename: 'style.[hash:8].css'})
         ]),
         optimization: {
             splitChunks: {

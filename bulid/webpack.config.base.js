@@ -20,14 +20,6 @@ const config = {  //导出一个具有特殊属性的对象
                 options: vueLoaderOptions(isDev)
             },
             {
-                test: /\.css$/,
-                use: [
-                    'vue-style-loader',
-                    'postcss-loader',
-                    'css-loader'
-                ]
-            },
-            {
                 test: /\.(gif|jpg|jpeg|png|svg)$/,
                 use: [
                     {

@@ -10,19 +10,11 @@ module.exports = async (req, res, renderer, template) => {
     console.log('context',context)
     try {
         const appString = await renderer.renderToString(context)
-        // console.log(appString)
         const html = ejs.render(template, {
                 appString,
                 style: context.renderStyles(),
                 scripts: context.renderScripts()
             })
-        // console.log('appString',appString)
-        // console.log('--------------------------')
-        // console.log('style',context.renderStyles())
-        // console.log('--------------------------')
-        // console.log('scripts',context.renderScripts())
-        // console.log('--------------------------')
-        // console.log('html',html)
         res.end(html)
     } catch (err) {
         console.log('render',err)

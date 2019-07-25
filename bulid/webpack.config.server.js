@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 
@@ -36,14 +35,20 @@ config = merge(baseConfig, {
             {
                 test: /\.styl(us)?$/,
                 use: [
-                    'css-loader',
+                    'vue-style-loader',
                     {
-                        loader: 'postcss-loader',
+                        loader: 'css-loader',
                         options: {
-                            sourceMap: true
+                            // modules: true,
+                            // localIdentName: '[path]-[name]-[hash:base64:5]',
+                            camelCase: true
                         }
                     },
-                    'stylus-loader'
+                    {
+                        loader: 'postcss-loader',
+                        options: {sourceMap: true}
+                    },
+                    'stylus-loader',
                 ]
             }
         ]
