@@ -20,6 +20,7 @@
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-router": "^7.4.0",
+    "serve-favicon": "^2.5.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.7",
     "vue-server-renderer": "^2.6.10",

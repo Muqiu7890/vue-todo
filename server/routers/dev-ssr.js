@@ -44,6 +44,7 @@ const handleSSR = async (req, res) => {
     let clientManifestResp
 
     try {
+        // 可以拿到打包后静态资源的路径
         clientManifestResp =await axios.get("http://localhost:8000/public/vue-ssr-client-manifest.json")
     } catch (error) {
         console.log('aaaaa',error)
