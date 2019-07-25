@@ -34,7 +34,7 @@ const defaultPlugins = [
     }),
     new HtmlWebpackPlugin({
         // 指定生成的文件依赖的html文件模板
-        template: './client/index.html'
+        template: './client/index.html',
     }),
     new VueLoaderPlugin(),
     new VueClientPlugin()

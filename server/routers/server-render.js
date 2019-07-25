@@ -23,7 +23,7 @@ module.exports = async (req, res, renderer, template) => {
         // console.log('scripts',context.renderScripts())
         // console.log('--------------------------')
         // console.log('html',html)
-        // res.end(html)
+        res.end(html)
     } catch (err) {
         console.log('render',err)
         throw err
