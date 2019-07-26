@@ -16,6 +16,9 @@
 
     export default {
         name: "App.vue",
+        metaInfo: {
+            title: 'todo'
+        },
         components: {Footer, Header},
     }
 </script>

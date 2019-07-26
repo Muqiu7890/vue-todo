@@ -7,7 +7,7 @@ const webpack = require('webpack')
 const VueServerRenderer = require('vue-server-renderer')
 
 const serverRender = require('./server-render')
-const serverConfig = require('../../bulid/webpack.config.server')
+const serverConfig = require('../../build/webpack.config.server')
 
 const router = express.Router()
 
@@ -29,9 +29,7 @@ serverCompiler.watch({}, async (err, stats) => {
         serverConfig.output.path,
         'vue-ssr-server-bundle.json'
     )
-    // console.log('bundlePath',bundlePath)
     serverBundle = JSON.parse(mfs.readFileSync(bundlePath, 'utf-8'))
-    // console.log(serverBundle)
     console.log('new bundle generated')
 })
 
@@ -51,7 +49,6 @@ const handleSSR = async (req, res) => {
     }
 
     const clientManifest = clientManifestResp.data
-    // console.log('clientManifest',clientManifest)
 
     const template = fs.readFileSync(path.join(__dirname, '../template.ejs'), 'utf-8')
 
@@ -61,7 +58,6 @@ const handleSSR = async (req, res) => {
             inject: false, // 手动注入资源
             clientManifest
         })
-    // console.log('renderer',renderer)
     try {
         await serverRender(req, res, renderer, template)
     } catch (e) {

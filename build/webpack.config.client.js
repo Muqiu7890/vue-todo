@@ -21,7 +21,7 @@ const devServer = {
     // 解决单页面应用出现的404（所访问资源在服务器找不到）
     // 若找不到资源 则返回默认首页
     historyApiFallback: {
-        index: '/index.html'
+        index: '/public/index.html'
     },
     hot: true
 }
@@ -74,7 +74,7 @@ if (isDev) {
 } else {
     config = merge(baseConfig, {
         entry: {
-            app: path.join(__dirname, '../client/index.js'),
+            app: path.join(__dirname, '../client/client-entry.js'),
             vendor: ['vue'] // 打包类库
         },
         output: {

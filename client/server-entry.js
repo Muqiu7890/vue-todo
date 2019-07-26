@@ -6,7 +6,6 @@ export default (context) => {
         let {url} = context;
         let {app, router} = createApp();
         router.push(url);
-
         // router回调函数  当所有异步请求完成之后就会触发
         router.onReady(() => {
             let matchedComponents = router.getMatchedComponents();
@@ -15,6 +14,7 @@ export default (context) => {
                     code: 404,
                 });
             }
+            context.meta = app.$meta()
             resolve(app);
         }, reject)
     })

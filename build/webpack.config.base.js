@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === "development"
 
 const config = {  //导出一个具有特殊属性的对象
     target: "web",
-    entry: path.join(__dirname, '../client/index.js'),
+    entry: path.join(__dirname, '../client/client-entry.js'),
     output: {
         filename: 'bundle.[hash:8].js',
         path: path.resolve(__dirname, '../dist'),

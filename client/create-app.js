@@ -4,9 +4,11 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import createRouter from './router/router'
 import createStore from './store/store'
+import Meta from 'vue-meta'
 import './asserts/style/global.styl'
 
 Vue.use(VueRouter)
+Vue.use(Meta)
 Vue.use(Vuex)
 
 export default () => {
@@ -19,5 +21,4 @@ export default () => {
         render: (h) => h(App)
     })
     return {app, router, store}
-
 }
