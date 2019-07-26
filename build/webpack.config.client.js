@@ -78,7 +78,8 @@ if (isDev) {
             vendor: ['vue'] // 打包类库
         },
         output: {
-            filename: "[name].[chunkhash:8].js"
+            filename: '[name].[chunkhash:8].js',
+            publicPath: '/public/'
         },
         module: {
             rules: [

@@ -8,7 +8,7 @@ const config = {  //导出一个具有特殊属性的对象
     entry: path.join(__dirname, '../client/client-entry.js'),
     output: {
         filename: 'bundle.[hash:8].js',
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../public'),
         publicPath: 'http://127.0.0.1:8000/public/'
     },
     mode: 'none',

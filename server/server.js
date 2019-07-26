@@ -1,11 +1,10 @@
 const express = require('express')
 const app = express()
-const pageRouter = require('./routers/dev-ssr')
 const path = require('path')
 const favicon = require('serve-favicon')
 const isDev = process.env.NODE_ENV === 'devlopment'
 app.use(favicon(path.join(__dirname, '../favicon.ico')))
-
+app.use('/public', express.static('public'))
 app.get('*', async (req, res, next) => {
     try {
         console.log(`request with path ${req.path}`)
@@ -20,6 +19,13 @@ app.get('*', async (req, res, next) => {
         }
     }
 })
+
+let pageRouter
+if(isDev) {
+    pageRouter = require('./routers/dev-ssr')
+} else {
+    pageRouter = require('./routers/ssr')
+}
 
 app.use(pageRouter)
 
