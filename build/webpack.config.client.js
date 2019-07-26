@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const WebpackDevServer = require('webpack-dev-server');
 // 将CSS提取为独立的文件的插件，对每个包含css的js文件都会创建一个CSS文件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
@@ -18,6 +17,7 @@ const devServer = {
     overlay: {
         errors: true,
     },
+    headers: {'Access-Control-Allow-Origin': '*'},
     // 解决单页面应用出现的404（所访问资源在服务器找不到）
     // 若找不到资源 则返回默认首页
     historyApiFallback: {

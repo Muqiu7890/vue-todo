@@ -5,6 +5,8 @@
         <transition name="fade">
             <router-view/>
         </transition>
+        <!--<notification content="test" />-->
+        <button @click="notify">dianji</button>
         <Footer/>
     </div>
 </template>
@@ -20,6 +22,20 @@
             title: 'todo'
         },
         components: {Footer, Header},
+        // mounted() {
+        //     this.$notify({
+        //         content: 'todo',
+        //         btn: 'close'
+        //     })
+        // },
+        methods: {
+            notify() {
+                this.$notify({
+                    content: 'todo',
+                    btn: 'close'
+                })
+            }
+        }
     }
 </script>
 
