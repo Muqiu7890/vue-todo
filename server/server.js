@@ -1,11 +1,34 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const bodyParser = require('body-parser')
+const session = require('express-session')
 const favicon = require('serve-favicon')
+const createDb = require('./db/db')
+const config = require('../app.config')
+const apiRouter = require('./routers/api')
+const userRouter = require('./routers/user')
+
 const isDev = process.env.NODE_ENV === 'devlopment'
+const db = createDb(config.db.appId, config.db.appKey)
+
+app.use(session({
+    secret: 'my todo app login',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        secure: true,
+        httpOnly: true,
+        maxAge: 2 * 60 * 60 * 1000
+    }
+}))
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.use(favicon(path.join(__dirname, '../favicon.ico')))
 app.use('/public', express.static('public'))
-app.get('*', async (req, res, next) => {
+
+app.use(async (req, res, next) => {
     try {
         console.log(`request with path ${req.path}`)
         await next()
@@ -13,12 +36,20 @@ app.get('*', async (req, res, next) => {
         console.log(err)
         res.status = 500
         if (isDev) {
-            res.body = err.message
+            res.send = err.message
         } else {
-            res.bosy = 'please try again later'
+            res.send = 'please try again later'
         }
     }
 })
+
+app.use((req, res, next) => {
+    req.db = db
+    next()
+})
+
+app.use(userRouter)
+app.use(apiRouter)
 
 let pageRouter
 if(isDev) {
