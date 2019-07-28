@@ -26,7 +26,6 @@ const handleRequest = ({ status, data, ...rest }) => {
 module.exports = (appId, appKey) => {
     const getHeaders = () => {
         const now = Date.now()
-        // console.log(`${sha1(`${appId}UZ${appKey}UZ${now}`)}.${now}`)
         return {
             'x-APICloud-AppId': appId,
             'X-APICloud-AppKey': `${sha1(`${appId}UZ${appKey}UZ${now}`)}.${now}`

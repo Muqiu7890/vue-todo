@@ -18,12 +18,10 @@ export default {
         return model.getAllTodos()
             .then((data) => {
                 commit('endLoading')
-                console.log('data',data)
                 commit('fetchTodos', data)
             })
             .catch((err) => {
                 commit('endLoading')
-                console.log('todo',err)
                 handleError(err)
             })
     },

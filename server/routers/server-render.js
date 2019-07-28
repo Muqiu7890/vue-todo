@@ -7,7 +7,6 @@ module.exports = async (req, res, renderer, template) => {
      renderResourceHints()、getPreloadFiles()这几种方法
     */
     const context = {url: req.url,user: req.session.user}
-    console.log('context', context)
     try {
         const appString = await renderer.renderToString(context)
 

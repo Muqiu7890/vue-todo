@@ -9,8 +9,6 @@ export default (context) => {
             store.commit('user',user)
         }
         router.push(url);
-
-        debugger
         // router回调函数  当所有异步请求完成之后就会触发
         router.onReady(() => {
             let matchedComponents = router.getMatchedComponents();
@@ -28,7 +26,6 @@ export default (context) => {
                     })
                 }
             })).then(data => {
-                console.log('data', store.state)
                 context.meta = app.$meta()
                 context.state = store.state
                 context.router = router

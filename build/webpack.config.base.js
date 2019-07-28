@@ -9,7 +9,7 @@ const config = {  //导出一个具有特殊属性的对象
     output: {
         filename: 'bundle.[hash:8].js',
         path: path.resolve(__dirname, '../public'),
-        publicPath: 'http://127.0.0.1:8000/public/'
+        publicPath: '/public/'
     },
     mode: 'none',
     module: {

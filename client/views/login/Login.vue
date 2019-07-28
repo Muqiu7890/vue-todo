@@ -53,10 +53,6 @@
             doSubmit(e) {
                 e.preventDefault()
                 if (this.validate()) {
-                    console.log({
-                        username: this.username,
-                        password: this.password
-                    })
                     this.login({
                         username: this.username,
                         password: this.password
