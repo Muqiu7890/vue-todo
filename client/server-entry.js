@@ -5,13 +5,15 @@ export default (context) => {
     return new Promise((resolve, reject) => {
         let {app, router, store} = createApp();
         let {url, user} = context;
+        // if (user) {
+        //     store.commit('user',user)
+        //     console.log('user ex', context.user)
+        // } else {
+        //     console.log('aaaa', user)
+        // }
         router.push(url);
-        if (user) {
-            store.commit('user',user)
-            console.log('user ex', context.user)
-        } else {
-            console.log('aaaa', user)
-        }
+
+        debugger
         // router回调函数  当所有异步请求完成之后就会触发
         router.onReady(() => {
             let matchedComponents = router.getMatchedComponents();

@@ -2,7 +2,7 @@
 export default [
     {
       path: '/',
-      redirect: '/app'
+      redirect: '/login'
     },
     {
         path: '/app',
