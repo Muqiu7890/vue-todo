@@ -1,13 +1,14 @@
 const express = require('express')
 const apiRouter = express.Router()
 
-const validateUser = async (req, res, next) => {
+const validateUser = (req, res, next) => {
+    console.log(req.session.user)
     if (!req.session.user) {
         res.status(401).json({
             message: 'need login'
         })
     } else {
-        await next()
+        next()
     }
 }
 
@@ -27,6 +28,7 @@ apiRouter.all('/api/*', async (req, res, next) => {
 apiRouter
     .get('/api/todos', async (req, res) => {
         const todos = await req.db.getAllTodos()
+        console.log(todos)
         res.send(successResponse(todos))
     })
     .post('/api/todo', async (req, res) => {
@@ -35,7 +37,7 @@ apiRouter
         res.send(successResponse(todos))
     })
     .put('/api/todo/:id', async (req, res) => {
-        const todos = await req.db.updateTodo(req.params.id,req.body)
+        const todos = await req.db.updateTodo(req.params.id, req.body)
         res.send(successResponse(todos))
     })
     .delete('/api/todo/:id', async (req, res) => {

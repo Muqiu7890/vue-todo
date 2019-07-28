@@ -4,7 +4,8 @@
             <input
                     type="checkbox"
                     class="toggle"
-                    v-model="todo.completed"
+                    :checked="todo.completed"
+                    @click="handleToggle"
             />
             <label @dblclick="getCurrentTodo(todo)">{{todo.content}}</label>
             <button
@@ -12,11 +13,14 @@
                     @click="deleteTodo"
             ></button>
         </div>
-        <input class="edit" type="text" v-model="todo.content" @blur="doneEdit()" @keyup.enter="doneEdit()">
+        <input class="edit" type="text" :value="getValue" @keyup="updateValue" @blur="doneEdit()"
+               @keyup.enter="doneEdit()">
     </div>
 </template>
 
 <script>
+    import {mapState} from "vuex";
+
     export default {
         name: "TodoItem",
         props: {
@@ -28,15 +32,36 @@
                 required: true
             }
         },
+        computed: mapState({
+            getValue(state) {
+                return state.todos.filter(i => i.id === this.todo.id)[0].content
+            }
+        }),
         methods: {
             getCurrentTodo(todo) {
-                this.$emit('currentTodo',todo)
+                this.$emit('currentTodo', todo)
             },
             doneEdit() {
                 this.$emit('cancelCurrentTodo')
             },
             deleteTodo() {
                 this.$emit('deleteOne')
+            },
+            handleToggle(e) {
+                e.preventDefault()
+                this.$emit('toggle', this.todo)
+            },
+            updateValue(e) {
+                clearTimeout(this.timeout)
+                this.timeout = setTimeout(() => {
+                    this.$store.dispatch('updateTodo', {
+                        id: this.todo.id,
+                        todo: Object.assign({}, this.todo, {
+                            content: e.target.value
+                        })
+                    })
+                }, 500)
+
             }
         }
     }

@@ -5,14 +5,15 @@
                 class="add-input"
                 autofocus="autofocus"
                 placeholder="What needs to be done?"
-                @keyup.enter="addTodo"
+                @keyup.enter="handleAdd"
         />
-        <TodoItem v-for="(todo,index) in filtertodos"
+        <TodoItem v-for="todo in filtertodos"
                   :todo="todo" :key="todo.id"
                   @currentTodo="currentTodo"
                   @cancelCurrentTodo="cancelCurrentTodo"
                   :currentEditing="currentEditing"
-                  @deleteOne="deleteOne(index)"/>
+                  @deleteOne="deleteOne(todo)"
+                  @toggle="toggleTodoState"/>
         <TodoTab v-if="todos.length > 0"
                  :todos="todos"
                  :filterstate="filterstate"
@@ -25,18 +26,19 @@
 <script>
     import TodoItem from './TodoItem.vue'
     import TodoTab from './TodoTab.vue'
+    import {mapActions, mapState} from 'vuex'
 
     export default {
         name: "Todo",
         components: {TodoTab, TodoItem},
         data() {
             return {
-                todos: [],
                 filterstate: 'all',
                 currentEditing: 'null'
             }
         },
         computed: {
+            ...mapState(['todos']),
             filtertodos: function () {
                 switch (this.filterstate) {
                     case 'active': {
@@ -54,21 +56,34 @@
                 }
             }
         },
+        mounted() {
+            this.fetchTodos()
+        },
         methods: {
-            addTodo(e) {
+            ...mapActions(['fetchTodos','addTodo','deleteTodo','updateTodo','deleteAllCompleted']),
+            handleAdd(e) {
                 let todoText = e.target.value.trim()
                 if (!todoText.length) {
+                    this.$notify({
+                        content: '请输入你要做的。。'
+                    })
                     return
                 } else {
-                    const last = this.todos[this.todos.length-1]
-                    const id = last ? last.id + 1 : 1
-                    this.todos.push({
-                        id,
+                    const todo = {
                         completed: false,
                         content: todoText
-                    })
+                    }
+                    this.addTodo(todo)
                     event.target.value = ''
                 }
+            },
+            toggleTodoState(todo) {
+                this.updateTodo({
+                    id: todo.id,
+                    todo: Object.assign({},todo,{
+                        completed: !todo.completed
+                    })
+                })
             },
             currentTodo(data) {
                 this.currentEditing = data
@@ -76,14 +91,14 @@
             cancelCurrentTodo() {
                 this.currentEditing = null
             },
-            deleteOne(delIndex) {
-                this.todos.splice(delIndex, 1)
+            deleteOne(todo) {
+                this.deleteTodo(todo.id)
             },
             toggleState(state) {
                 this.filterstate = state
             },
             clearAllCompleted() {
-                this.todos = this.todos.filter(todo => !todo.completed)
+                this.deleteAllCompleted()
             }
         }
     }

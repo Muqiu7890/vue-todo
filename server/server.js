@@ -12,19 +12,20 @@ const userRouter = require('./routers/user')
 const isDev = process.env.NODE_ENV === 'devlopment'
 const db = createDb(config.db.appId, config.db.appKey)
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 app.use(session({
-    secret: 'my todo app login',
+    secret: 'my secret',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: {
-        secure: true,
+        // secure: true,
         httpOnly: true,
         maxAge: 2 * 60 * 60 * 1000
     }
 }))
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 app.use(favicon(path.join(__dirname, '../favicon.ico')))
 app.use('/public', express.static('public'))
 
@@ -49,6 +50,16 @@ app.use((req, res, next) => {
 })
 
 app.use(userRouter)
+// app.use((req,res,next) => {
+//     console.log(req.session.user)
+//     if(!req.session.user) {
+//         res.status(401).json({
+//             message: 'need login'
+//         })
+//     } else {
+//         next()
+//     }
+// })
 app.use(apiRouter)
 
 let pageRouter

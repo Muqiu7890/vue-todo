@@ -7,8 +7,8 @@ const request = axios.create({
     baseURL: 'https://d.apicloud.com/mcm/api'
 })
 
-const createError = (code, resp) => {
-    const err = new Error(resp.message)
+const createError = (code, res) => {
+    const err = new Error(res.message)
     err.code = code
     return err
 }

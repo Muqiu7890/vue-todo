@@ -5,8 +5,6 @@
         <transition name="fade">
             <router-view/>
         </transition>
-        <!--<notification content="test" />-->
-        <button @click="notify">dianji</button>
         <Footer/>
     </div>
 </template>

@@ -23,6 +23,10 @@ const devServer = {
     historyApiFallback: {
         index: '/public/index.html'
     },
+    proxy: {
+        '/api': 'http://127.0.0.1:5000',
+        '/user': 'http://127.0.0.1:5000'
+    },
     hot: true
 }
 
