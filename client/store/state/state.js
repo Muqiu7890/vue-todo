@@ -1,4 +1,5 @@
 export default {
     todos: [],
-    user: null
+    user: null,
+    loading: false
 }

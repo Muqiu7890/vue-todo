@@ -21,7 +21,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         // secure: true,
-        httpOnly: true,
+        // httpOnly: true,
         maxAge: 2 * 60 * 60 * 1000
     }
 }))
@@ -50,16 +50,6 @@ app.use((req, res, next) => {
 })
 
 app.use(userRouter)
-// app.use((req,res,next) => {
-//     console.log(req.session.user)
-//     if(!req.session.user) {
-//         res.status(401).json({
-//             message: 'need login'
-//         })
-//     } else {
-//         next()
-//     }
-// })
 app.use(apiRouter)
 
 let pageRouter

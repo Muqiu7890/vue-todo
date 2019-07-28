@@ -1,6 +1,27 @@
 {
-  "presets": [
-    "@babel/preset-env"
-  ],
-  "plugins": ["syntax-dynamic-import"]
+  "plugins": ["syntax-dynamic-import"],
+  "env": {
+    "browser": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+          "targets": {
+            "browsers": ["last 2 versions", "safari >= 7"]
+          }
+        }
+        ]
+      ]
+    },
+    "node": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+          "targets": {
+            "node": "current"
+          }
+        }
+        ]
+      ]
+    }
+  }
 }

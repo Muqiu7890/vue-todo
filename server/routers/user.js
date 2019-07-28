@@ -5,6 +5,7 @@ userRouter.post('/user/login',(req, res, next) => {
     const {username,password} = req.body
     if(username === 'qiaojing' && '6ce51de8db9a89b373c61716514f5483e9116688' === sha1(password)) {
         req.session.user = {username}
+        console.log('login',req.session.user)
         res.status(200).json({
             success:  1,
             data: {

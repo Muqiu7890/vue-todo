@@ -23,6 +23,15 @@ export default {
     },
     deleteAllCompleted (state) {
         state.todos = state.todos.filter(t => !t.completed)
+    },
+    startLoading (state) {
+        state.loading = true
+    },
+    endLoading (state) {
+        state.loading = false
+    },
+    user(state, username) {
+        state.user = username
     }
 
 }
