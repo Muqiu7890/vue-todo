@@ -5,12 +5,9 @@ export default (context) => {
     return new Promise((resolve, reject) => {
         let {app, router, store} = createApp();
         let {url, user} = context;
-        // if (user) {
-        //     store.commit('user',user)
-        //     console.log('user ex', context.user)
-        // } else {
-        //     console.log('aaaa', user)
-        // }
+        if (user) {
+            store.commit('user',user)
+        }
         router.push(url);
 
         debugger

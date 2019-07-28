@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc7e1bf1-4862-4a32-839e-707a50e74567" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/router/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/server-entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/server-entry.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -65,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server-entry.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server-entry.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/server-entry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="290">
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -83,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/router/routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -213,8 +212,8 @@
         <option value="$PROJECT_DIR$/server/routers/api.js" />
         <option value="$PROJECT_DIR$/client/store/mutations/mutations.js" />
         <option value="$PROJECT_DIR$/server/routers/server-render.js" />
-        <option value="$PROJECT_DIR$/client/server-entry.js" />
         <option value="$PROJECT_DIR$/client/router/routes.js" />
+        <option value="$PROJECT_DIR$/client/server-entry.js" />
       </list>
     </option>
   </component>
@@ -381,6 +380,36 @@
             <path>
               <item name="todos" type="b2602c69:ProjectViewProjectNode" />
               <item name="todos" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todos" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todos" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todos" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todos" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -453,12 +482,12 @@
       <workItem from="1564106255199" duration="20010000" />
       <workItem from="1564145153497" duration="12169000" />
       <workItem from="1564195210931" duration="38638000" />
-      <workItem from="1564281946579" duration="30331000" />
+      <workItem from="1564281946579" duration="31878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287834000" />
+    <option name="totallyTimeSpent" value="289381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -481,7 +510,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.5878136" />
       <window_info id="npm" order="2" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" visible="true" weight="0.36200717" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" visible="true" weight="0.24910395" />
       <window_info id="Favorites" order="3" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
@@ -855,13 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/server-entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -873,6 +895,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/server-entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
         </state>
       </provider>
     </entry>
