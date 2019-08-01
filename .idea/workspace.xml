@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cc7e1bf1-4862-4a32-839e-707a50e74567" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,30 +18,12 @@
     <favorites_list name="todos" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
+    <leaf>
+      <file leaf-file-name="pm2.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pm2.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/webpack.config.server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state>
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -101,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/layout/Header.vue" />
         <option value="$PROJECT_DIR$/bulid/webpack.config.client.js" />
         <option value="$PROJECT_DIR$/bulid/webpack.config.base.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -152,6 +132,7 @@
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/build/webpack.config.server.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/pm2.yml" />
       </list>
     </option>
   </component>
@@ -171,7 +152,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="939" />
     <option name="width" value="1011" />
     <option name="height" value="1032" />
@@ -182,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,7 +185,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,11 +240,14 @@
       <workItem from="1564195210931" duration="38638000" />
       <workItem from="1564281946579" duration="41374000" />
       <workItem from="1564627473504" duration="547000" />
+      <workItem from="1564628035929" duration="270000" />
+      <workItem from="1564631085228" duration="608000" />
+      <workItem from="1564671356796" duration="2648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299424000" />
+    <option name="totallyTimeSpent" value="302950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,20 +259,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49875313" visible="true" weight="0.22160445" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49875313" visible="true" weight="0.22160445" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297491" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50039715" side_tool="true" weight="0.32616487" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5878136" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.39964157" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3309481" />
       <window_info id="npm" order="2" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5878136" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" visible="true" weight="0.21684588" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" visible="true" weight="0.4982079" />
       <window_info id="Favorites" order="3" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -337,13 +320,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/util/bus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/model/util.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -608,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.config.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
+        <state relative-caret-position="1536">
           <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
         </state>
       </provider>
@@ -617,6 +593,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pm2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
