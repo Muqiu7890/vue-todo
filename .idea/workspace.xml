@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc7e1bf1-4862-4a32-839e-707a50e74567" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/webpack.config.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/webpack.config.base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/asserts/style/global.styl" beforeDir="false" afterPath="$PROJECT_DIR$/client/asserts/style/global.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server-entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/server-entry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/views/login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/views/login/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routers/server-render.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/server-render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="webpack.config.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/webpack.config.client.js">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1964">
-              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="672">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -39,58 +32,17 @@
       <file leaf-file-name="webpack.config.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/webpack.config.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="853">
+              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue-loader.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/vue-loader.config.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="server-entry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/server-entry.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server-render.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routers/server-render.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/asserts/style/global.styl">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.base.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build/webpack.config.base.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -115,7 +67,6 @@
       <find>//</find>
       <find>console</find>
       <find>dist</find>
-      <find>render</find>
       <find>console.log('</find>
       <find>bbb</find>
       <find>res.end</find>
@@ -138,6 +89,7 @@
       <find>back</find>
       <find>image</find>
       <find>console.log</find>
+      <find>render</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\QJ\Desktop\todos\client</dir>
@@ -149,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/index.html" />
-        <option value="$PROJECT_DIR$/bulid/webpack.config.server.js" />
         <option value="$PROJECT_DIR$/client/layout/Header.vue" />
         <option value="$PROJECT_DIR$/bulid/webpack.config.client.js" />
         <option value="$PROJECT_DIR$/bulid/webpack.config.base.js" />
@@ -181,11 +131,9 @@
         <option value="$PROJECT_DIR$/client/store/state/state.js" />
         <option value="$PROJECT_DIR$/client/App.vue" />
         <option value="$PROJECT_DIR$/build/webpack.config.client.js" />
-        <option value="$PROJECT_DIR$/build/webpack.config.server.js" />
         <option value="$PROJECT_DIR$/client/model/server-model.js" />
         <option value="$PROJECT_DIR$/client/store/actions/actions.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/template.ejs" />
         <option value="$PROJECT_DIR$/client/client-entry.js" />
         <option value="$PROJECT_DIR$/client/views/todo/Todo.vue" />
@@ -195,11 +143,15 @@
         <option value="$PROJECT_DIR$/client/store/mutations/mutations.js" />
         <option value="$PROJECT_DIR$/client/router/routes.js" />
         <option value="$PROJECT_DIR$/client/server-entry.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/client/asserts/style/global.styl" />
         <option value="$PROJECT_DIR$/public/1.style.4921e658.css" />
         <option value="$PROJECT_DIR$/server/routers/server-render.js" />
         <option value="$PROJECT_DIR$/build/webpack.config.base.js" />
+        <option value="$PROJECT_DIR$/server/routers/ssr-no-bundle.js" />
+        <option value="$PROJECT_DIR$/server/routers/server-render-no-bundle.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/build/webpack.config.server.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -220,9 +172,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="940" />
-    <option name="width" value="1010" />
-    <option name="height" value="1031" />
+    <option name="x" value="939" />
+    <option name="width" value="1011" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -240,23 +192,12 @@
             <path>
               <item name="todos" type="b2602c69:ProjectViewProjectNode" />
               <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="todos" type="b2602c69:ProjectViewProjectNode" />
               <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
+              <item name="server-build" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -268,7 +209,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -316,12 +257,13 @@
       <workItem from="1564106255199" duration="20010000" />
       <workItem from="1564145153497" duration="12169000" />
       <workItem from="1564195210931" duration="38638000" />
-      <workItem from="1564281946579" duration="38027000" />
+      <workItem from="1564281946579" duration="41374000" />
+      <workItem from="1564627473504" duration="547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295530000" />
+    <option name="totallyTimeSpent" value="299424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,19 +276,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49875313" visible="true" weight="0.22160445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49875313" visible="true" weight="0.22160445" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297491" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50039715" side_tool="true" weight="0.32616487" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4749104" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.39964157" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5878136" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.39964157" />
       <window_info id="npm" order="2" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" visible="true" weight="0.33870968" />
-      <window_info id="Favorites" order="3" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" visible="true" weight="0.21684588" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="3" sideWeight="0.50124687" side_tool="true" weight="0.223193" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,6 +296,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4749104" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,54 +337,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/components/tabs/tabs.vue" />
-    <entry file="file://$PROJECT_DIR$/client/components/tabs/tab.vue" />
-    <entry file="file://$PROJECT_DIR$/server/routers/ssr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../cms-api/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../cms-api/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/layout/Header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/layout/Footer.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/notification/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/notification/function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/util/bus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -472,9 +367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,9 +388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="25" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!block;n#env#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,9 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
           <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#321#361#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -526,9 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -555,11 +438,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-648" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/create-app.js">
@@ -597,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/store/actions/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -636,9 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,46 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/vue-loader.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.config.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1964">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.config.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/1.style.72ad2796.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="139" column="31" lean-forward="true" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/1.style.4921e658.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="137" column="37" lean-forward="true" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/1.style.72ad2796.css" />
+    <entry file="file://$PROJECT_DIR$/public/1.style.4921e658.css" />
     <entry file="file://$PROJECT_DIR$/client/asserts/images/background.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/asserts/style/global.styl">
       <provider selected="true" editor-type-id="text-editor">
@@ -704,16 +537,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/1.style.c22ced39.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="136" column="25" lean-forward="true" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
-          <folding>
-            <element signature="e#2921#34933#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/1.style.c22ced39.css" />
     <entry file="file://$PROJECT_DIR$/client/server-entry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -724,17 +548,75 @@
     <entry file="file://$PROJECT_DIR$/public/2.29e1daf3.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routers/server-render.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/build/vue-loader.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.config.base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="7" column="61" lean-forward="true" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+        <state relative-caret-position="72">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.config.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routers/ssr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="22" column="5" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routers/server-render.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="9" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="409" column="2" selection-start-line="409" selection-start-column="2" selection-end-line="409" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routers/ssr-no-bundle.js" />
+    <entry file="file://$PROJECT_DIR$/server/routers/server-render-no-bundle.js" />
+    <entry file="file://$PROJECT_DIR$/server-build/1.server-entry.js.map" />
+    <entry file="file://$PROJECT_DIR$/server-build/2.server-entry.js" />
+    <entry file="file://$PROJECT_DIR$/server-build/server-entry.js" />
+    <entry file="file://$PROJECT_DIR$/server-build/1.server-entry.js" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.config.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="853">
+          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
         </state>
       </provider>
     </entry>
